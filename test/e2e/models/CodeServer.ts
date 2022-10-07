@@ -327,7 +327,7 @@ export class CodeServerPage {
     const selector = "text=test extension loaded"
     this.codeServer.logger.debug("Waiting for test extension to load...")
 
-    await this.page.waitForSelector(selector)
+    await this.page.waitForSelector(selector, { timeout: 5000 })
   }
 
   /**
